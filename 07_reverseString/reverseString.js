@@ -1,5 +1,5 @@
 const reverseString = function(string) {
-    string = "" + string;
+    string = "" + string; // to make sure all entries gets converted to string
     let stringArr = string.split('');
     let stringLen = stringArr.length;
     let reversedString = "";
