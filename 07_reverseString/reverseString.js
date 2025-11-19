@@ -4,9 +4,17 @@ const reverseString = function(string) {
     let stringLen = stringArr.length;
     let reversedString = "";
 
+    //0.115s
+
     for(let i=0; i < stringLen; i++) {
         reversedString += stringArr.pop();
     }
+
+    // 0.178s
+    // stringArr.forEach(element => {
+    //     reversedString += stringArr.pop()
+    // });
+
     return reversedString
 };
 
