@@ -1,6 +1,4 @@
 const elementsArr = ["rock", "paper", "scissors"];
-let humanChoice = getHumanChoice();
-let computerChoice = getComputerChoice();
 let computerScore = 0;
 let humanScore = 0;
 
@@ -38,15 +36,21 @@ function playRound(human, computer) {
 };
 
 function playGame() {
+
     for(let round = 1; round <= 5; round++) {
-        playRound();
+        console.log(`Round ${round}`);
+        let humanChoice = getHumanChoice();
+        let computerChoice = getComputerChoice();
+        playRound(humanChoice, computerChoice);
     };
 
     if (humanScore == computerScore) {
-        console.log("You are tie with the computer.")
+        console.log("You are tie with the computer.");
     } else if (humanScore > computerScore) {
-        console.log("The ultimate winner is Player Human!")
+        console.log("The ultimate winner is Player Human!");
     } else {
-        console.log("The ultimate winner is Player Computer!")
-    }
+        console.log("The ultimate winner is Player Computer!");
+    };
+
+    console.log(`Human: ${humanScore} - Computer: ${computerScore}`);
 };
