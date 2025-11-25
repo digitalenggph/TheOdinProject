@@ -1,3 +1,34 @@
+const people = [
+  "Chris",
+  "Anne",
+  "Colin",
+  "Terri",
+  "Phil",
+  "Lola",
+  "Sam",
+  "Kay",
+  "Bruce",
+];
+
+const petPeeve = ["Phil", "Lola"]
+
+const admitted = document.querySelector(".admitted");
+const refused = document.querySelector(".refused");
+admitted.textContent = "Admit: ";
+refused.textContent = "Refuse: ";
+
+for (const person of people) {
+    if (petPeeve.includes(person)) {
+        refused.textContent += `${person}, `;
+    } else {
+        admitted.textContent += `${person}, `;
+    };    
+};
+
+admitted.textContent = admitted.textContent.slice(0, -2);
+refused.textContent = refused.textContent.slice(0, -2);
+
+/*
 const output = document.querySelector(".output");
 const heading = document.querySelector(".heading")
 const btn = document.querySelector("button");
@@ -19,7 +50,6 @@ btn.addEventListener("click", () => {
             }
             output.appendChild(para);
         }, (10 - i) * ONESECOND);
-                    
-         
     }
 });
+*/
