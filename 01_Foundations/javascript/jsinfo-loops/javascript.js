@@ -4,16 +4,10 @@ const btn = document.querySelector("button");
 
 
 btn.addEventListener("click", () => {
-    // para.textContent = "";
     let startNum = parseInt(input.value);
-    const arr = Array.from(Array(startNum -1).keys()).map(i=> i + 1);
-
-    // for (let i=1; i <= startNum; i++){
-    //     testPrimeNumber(i) ? para.textContent += `${i} `: "";
-    // }
-
-    const primeNumbers = arr.filter(testPrimeNumber);
-    para.textContent = String(primeNumbers);
+    let arr = Array.from(Array(startNum -1).keys()).map(i=> i + 1);
+    let primeNumbers = arr.filter(testPrimeNumber);
+    para.textContent = String(primeNumbers).replaceAll(",", " ");
 });
 
 function testPrimeNumber(number) {
