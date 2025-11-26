@@ -2,30 +2,27 @@ const input = document.querySelector("input");
 const para = document.querySelector("p");
 const btn = document.querySelector("button");
 
-para.textContent = "";
 
 btn.addEventListener("click", () => {
+    para.textContent = "";
     let startNum = parseInt(input.value);
 
-    let i = 1;
-    while (i < startNum) {
-        if (testPrimeNumber(i) == true) {
-            para.textContent += `${i} `
-        };
-        i++;           
+    for (let i=1; i <= startNum; i++){
+        testPrimeNumber(i) ? para.textContent += `${i} `: "";
     }
-
 });
 
 function testPrimeNumber(number) {
+    let factorsArray = [];
     let i = number;
-    while (i > 1) {
+    while (i >= 1) {
         if (number % i == 0){
-            i--;
-            continue; 
-        } 
-        return true; 
+            factorsArray.push(i);
+        }
+        i--;
     }
+
+    return factorsArray.length === 2
 }
 
 
