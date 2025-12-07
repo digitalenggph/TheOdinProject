@@ -11,8 +11,13 @@
       .join("")
   } 
 
+  function filterRange(arr, a, b) {
+    return arr
+      .filter(num => (num >= a && num <= b))
+  }
+
   /* 
-  
+  ---- Translate border-left-width to borderLeftWidth -----
   My initial solution
   OK 1. Get string
   OK 2. Convert string to array
@@ -26,6 +31,12 @@
   OK 2. Convert string to array of words separated by dashes
   3. For each word, capitalize the index[0] (first letter)
   4. Join words
+
+  --------------------- Filter range ----------------------
+  My initial solution
+  1. Get inputs: array arr, lower limit a, upper limit b
+  2. Filter range: all numbers between and including a & b
+  3. Return an array
   
   */
 
