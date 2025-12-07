@@ -25,6 +25,21 @@
     }
   };
 
+  let sortArray = [5, 2, 1, -10, 8];
+  sortArray.sort(function(a, b) {return b-a}); // w3 solution
+  sortArray.sort((a, b) => b - a); // javascript info solution
+
+  function copySorted(arr) {
+    // return arr.sort()        -> this is wrong as it mutates the original array
+    return arr.slice().sort();  // slice() creates a copy then sorts it without modifying original array
+  };
+
+  function unique(arr) {
+    let arrSet = new Set(arr);    // returns Set object
+    return Array.from(arrSet)     // transform it back to array
+  };
+
+
   /* 
   ---- Translate border-left-width to borderLeftWidth -----
   My initial solution
@@ -52,6 +67,14 @@
   1. Get inputs: array arr, lower limit a, upper limit b
   2. Filter range: all numbers between and including a & b (using for loop)
   3. Splice (using index) if not within this range.
+
+  --------------- Sort in descending order ----------------
+  Straightforward solution: https://www.w3schools.com/jsref/jsref_sort.asp
+
+  --------------- Filter unique array member ---------------
+  https://stackoverflow.com/questions/28965112/javascript-array-to-set
+  Solutiion by Ashlesh
+
 
   */
 
