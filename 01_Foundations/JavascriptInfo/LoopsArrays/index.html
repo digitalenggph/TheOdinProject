@@ -1,0 +1,34 @@
+<!doctype html>
+<script src="https://en.js.cx/test/libs.js"></script>
+<script src="test.js"></script>
+<script>
+
+  function camelize(str) {
+    const strArr = str.split("")
+    const charNextToDashesIndices = []
+    strArr.forEach((char, index) => {
+      if (char == "-") {
+        charNextToDashesIndices.push(index+1);
+      }
+    });
+
+    let newStr = strArr
+        .map((char, index) => charNextToDashesIndices.includes(index) ? char.toUpperCase() : char)
+        .filter((char, index) => char != "-")
+        .join("");
+    
+    return newStr
+  } 
+
+  /*
+  OK 1. Get string
+  OK 2. Convert string to array
+  OK 3. Get index of dashes
+  OK 4. Pop/filter non-dash characters
+  OK 5. New element that replaces that index gets capitalized
+  OK 6. Join the array to form string
+  */
+
+</script>
+
+</html>
