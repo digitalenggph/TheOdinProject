@@ -4,29 +4,29 @@
 <script>
 
   function camelize(str) {
-    const strArr = str.split("")
-    const charNextToDashesIndices = []
-    strArr.forEach((char, index) => {
-      if (char == "-") {
-        charNextToDashesIndices.push(index+1);
-      }
-    });
-
-    let newStr = strArr
-        .map((char, index) => charNextToDashesIndices.includes(index) ? char.toUpperCase() : char)
-        .filter((char, index) => char != "-")
-        .join("");
-    
-    return newStr
+    // imitate web solution
+    return str
+      .split("-")
+      .map((word, index) => index != 0 ? word.at(0).toUpperCase() + word.slice(1) : word)
+      .join("")
   } 
 
-  /*
+  /* 
+  
+  My initial solution
   OK 1. Get string
   OK 2. Convert string to array
   OK 3. Get index of dashes
   OK 4. Pop/filter non-dash characters
   OK 5. New element that replaces that index gets capitalized
   OK 6. Join the array to form string
+
+  Better solution
+  OK 1. Get string
+  OK 2. Convert string to array of words separated by dashes
+  3. For each word, capitalize the index[0] (first letter)
+  4. Join words
+  
   */
 
 </script>
