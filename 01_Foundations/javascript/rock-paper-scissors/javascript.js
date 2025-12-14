@@ -88,12 +88,10 @@ function enableButtons(){
 
 function announceWinner() {
     const winner = (humanScore > computerScore)
-        ? "Human wins!"
+        ? "You win!"
         : "Computer wins!"
 
-    const winnerSpan = document.createElement("span");
-    winnerSpan.textContent = winner;
-    scoreboard.appendChild(winnerSpan);
+    scoreboard.textContent = winner
 };
 
 function reset() {
@@ -101,7 +99,7 @@ function reset() {
     humanScore = 0;
     updateScoreboard();
     enableButtons();
-    scoreboard.textContent = "Scoreboard "
+    scoreboard.textContent = "Scoreboard"
     humanPlayground.innerHTML = "";
     computerPlayground.innerHTML = "";
 };
