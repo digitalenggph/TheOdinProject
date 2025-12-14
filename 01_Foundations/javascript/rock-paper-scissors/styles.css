@@ -1,0 +1,74 @@
+h1, h3, h4 {
+    font-family: 'Press Start 2P', monospace;
+    color: green;
+    text-align: center;
+    
+}
+
+#playground {
+    text-align: center;
+}
+
+#human, #computer {
+    display: inline-block;
+    border: 1px solid black;
+    margin: 0px;
+    padding: 0px;
+    height: 250px; 
+    width: 250px;
+}
+
+#human img, #computer img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#human {
+    margin-right: 50px;
+}
+
+#button-choices {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+#button-choices li {
+    display: inline-block;
+}
+
+#btn-rock {
+    background-image: url("./img/rock.png");
+    background-size: cover;
+    background-color: white;
+    border: 0px;
+    height: 150px;
+    width: 150px; 
+}
+
+#btn-paper {
+    background-image: url("./img/paper.png");
+    background-size: cover;
+    background-color: white;
+    border: 0px;
+    height: 150px;
+    width: 150px; 
+}
+
+#btn-scissors {
+    background-image: url("./img/scissors.png");
+    background-size: cover;
+    background-color: white;
+    border: 0px;
+    height: 150px;
+    width: 150px; 
+}
+
+#reset-control {
+    text-align: center;
+}
+
+
+
+
