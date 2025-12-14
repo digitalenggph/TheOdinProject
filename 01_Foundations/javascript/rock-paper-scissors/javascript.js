@@ -14,15 +14,14 @@ buttonReset.addEventListener('click', reset);
 
 
 function playGame(e) {
-    if (!e.target.matches('button')) return;   // do not proceed logic if item clicked is not button
-
     const target = e.target;
+    if (!target.matches('button')) return;   // do not proceed logic if item clicked is not button
+    
     const humanChoice = target.id.replace("btn-", "");
     const computerChoice = getComputerChoice();
     const winner = playRound(humanChoice, computerChoice);
 
-    if (winner === "human") humanScore++;
-    if (winner === "computer") computerScore++;
+    updateScore(winner);
     updateScoreboard();
 
     if (humanScore === 5 || computerScore ===5) {
@@ -49,6 +48,11 @@ function playRound(human, computer) {
         return "computer";
     }
 };
+
+function updateScore(winner) {
+    if (winner === "human") return humanScore++;
+    if (winner === "computer") return computerScore++;
+}
 
 function updateScoreboard() {
     humanScoreText.textContent = humanScore;
