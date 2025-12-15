@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css?family=Croissant+One&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+h1 {
+    font-family: "Croissant One", 'Tahoma', 'Times New Roman';
+    text-align: center;
+}
+
+h1.Landing {
+    font-size: 50px;
+}
+
+li {
+    font-family: "Montserrat";
+}
+
+
