@@ -4,10 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="styles.css" rel="stylesheet">
-    <title>Document</title>
+    <title>Etch-A-Sketch</title>
 </head>
 <body>
+    <h1>Etch-A-Sketch</h1>
+
+    <!-- Choose your pen settings -->
+    <ul id="pen">
+        <li><button id="vanilla">Vanilla</button></li>
+        <li><button id="rainbow">Rainbox</button></li>
+        <li><button id="darkening">Darkening</button></li>
+    </ul>
+    <br> 
     
+    <!-- Drawing area -->
+    <div class="container"></div>
+
+    <br>
+    <!-- Canvas settings -->
+    <ul id="paper">
+        <input id="grid-size" type="number" min="16" max="64" step="1" value="16">
+        <button id="reset">Reset</button>
+    </ul>
+     
+
     <script src="script.js"></script>
 </body>
 </html>
