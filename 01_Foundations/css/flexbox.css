@@ -1,0 +1,71 @@
+.container {
+  display: flex;
+  align-items: center;
+  gap: 10px
+}
+
+.item {
+  flex: 1;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.green {
+  background-color: lightgreen;
+  padding: 12px;
+  border: 4px solid green;
+  gap: 10px;
+}
+
+.orange {
+  background-color: peachpuff;
+  border: 4px solid salmon;
+  padding: 10px;
+}
+
+.violet {
+  background-color: plum;
+  border: 4px solid purple;
+  height: 80%;
+  padding: 10px; 
+}
+
+.red {
+  background-color: pink;
+  border: 4px solid red;
+}
+
+.red.item.item-left {
+  height: 192px;
+}
+
+.item.flex-column {
+  height: 200px;
+  gap: 10px; 
+}
+
+.blue {
+  background-color: lightblue;
+  border: 4px solid blue;
+  height: 100px;
+  padding: 15px; 
+/*   margin: 15px 0; */
+  
+}
+
+.blue .orange {
+  height: 80%;
+  gap: 0px;
+}
+
+
+.blue .orange .red {
+  height: 80%;
+}
+
+.orange-container {
+  height: 100%
+}
