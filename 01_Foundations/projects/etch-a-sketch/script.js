@@ -50,24 +50,22 @@ function setContainerSize(){
 function drawGrid(size) {
     clearCanvas();
     for(let row=0; row<size; row++) {
-        const rowDiv = document.createElement("div")
-        rowDiv.classList.add("row")
+        const rowDiv = document.createElement("div");
+        rowDiv.classList.add("row");
         mainGrid.appendChild(rowDiv);
 
         for(let i=0; i<size; i++) {
             const div = document.createElement("div");
             div.classList.add("cell");
             rowDiv.appendChild(div);
-        }
-    }
+        };
+    };
 };
 
 function setPen(e) {
     const target = e.target;
     if (!target.matches('button')) return;
-
-    penSettings = target.id
-    console.log(penSettings)
+    penSettings = target.id;
 }
 
 function setOpacity() {
@@ -97,7 +95,6 @@ function draw(e) {
                 target.classList.remove("inked")
                 target.classList.add("darkened")
             } else if (!isDarkened) {
-                console.log("free")
                 target.style.backgroundColor = "black";
                 target.style.opacity = 0.1;
                 target.classList.add("darkened");
@@ -117,7 +114,6 @@ function draw(e) {
             break;
     }   
 };
-
 
 
 function erase(e) {
