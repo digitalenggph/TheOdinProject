@@ -10,11 +10,11 @@
 
         // --------------------- MAP TO NAMES --------------------- //
 
-        let john = { name: "John", age: 25 };
-        let pete = { name: "Pete", age: 30 };
-        let mary = { name: "Mary", age: 29 };
+        // let john = { name: "John", age: 25 };
+        // let pete = { name: "Pete", age: 30 };
+        // let mary = { name: "Mary", age: 29 };
 
-        let users = [ john, pete, mary ];
+        // let users = [ john, pete, mary ];
 
         // let names = users.map(user => user.name)
 
@@ -43,7 +43,7 @@
         //     arrayItems.sort((a, b) => a.age - b.age);
         // };
 
-        let arr = [ pete, john, mary ];
+        // let arr = [ pete, john, mary ];
         // sortByAge(arr);
 
         // // now: [john, mary, pete]
@@ -53,20 +53,40 @@
 
         // ------------------- GET AVERAGE AGE ------------------- //
 
-        alert( getAverageAge(arr) );
+        // alert( getAverageAge(arr) );
 
-        function getAverageAge(arrayItems) {
-            return  arrayItems.reduce((total, currentItem) => 
-                total + currentItem.age, 0) / arrayItems.length;
-        };
+        // function getAverageAge(arrayItems) {
+        //     return  arrayItems.reduce((total, currentItem) => 
+        //         total + currentItem.age, 0) / arrayItems.length;
+        // };
 
+        // ----------- CREATE KEYED OBJECT FROM ARRAY ----------- //
+        let users = [
+        {id: 'john', name: "John Smith", age: 20},
+        {id: 'ann', name: "Ann Smith", age: 24},
+        {id: 'pete', name: "Pete Peterson", age: 31},
+        ];
+
+        let usersById = groupById(users);
         
+        // function groupById(arrayItems) {
+        //     return arrayItems.reduce((acc, user) => {
+        //         acc[user.id] = user;
+        //         return acc;
+        //     }, {});
+        // }
 
+        // This one I understand better :D
+        function groupById(arrayItems) {
+            let acc = {};
+            for (let item of arrayItems) {
+                acc[item.id] = item;
+            }
 
+            return acc;
+        }
 
-
-
-
+        alert(usersById);
     </script>
     
 </body>
