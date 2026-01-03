@@ -7,24 +7,32 @@ const subtract = function(a, b) {
 };
 
 const sum = function(args) {
-  let argsSum = 0;
+  // let argsSum = 0;
 
-  args.forEach(element => {
-      argsSum += element
-    }
-  );
+  // args.forEach(element => {
+  //     argsSum += element
+  //   }
+  // );
+
+  const argsSum = args.reduce((total, currentElement) => {
+    return total + currentElement;
+  }, 0)
 
 	return argsSum;
 };
 
 
 const multiply = function(args) {
-  let argsProduct = 1;
+  // let argsProduct = 1;
 
-  args.forEach(element => {
-      argsProduct *= element
-    }
-  );
+  // args.forEach(element => {
+  //     argsProduct *= element
+  //   }
+  // );
+
+  const argsProduct = args.reduce((total, currentElement) => {
+    return total * currentElement;
+  }, 1);
 
 	return argsProduct;
 };
